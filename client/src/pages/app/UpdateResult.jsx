@@ -32,7 +32,7 @@ export default function UpdateResult() {
     event.preventDefault();
     const mutationResponse = await UpdateResult({
       variables: {
-        _id: location.state.id,
+        id: location.state.id,
         patientFirstName: formState.patientFirstName,
         patientLastName: formState.patientLastName,
         phoneNumber: formState.phoneNumber,
