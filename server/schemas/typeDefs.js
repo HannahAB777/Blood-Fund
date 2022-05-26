@@ -46,12 +46,17 @@ const typeDefs = gql`
       createdAt: Date!
     ): Result
     login(email: String!, password: String!): Auth
-    deleteResult(patientFirstName: String!
+    deleteResult(
+      patientFirstName: String!
       patientLastName: String!
-      phoneNumber: String!): Admin
-    updateResult( _id: ID, patientFirstName: String!
+      phoneNumber: String!
+    ): Admin
+    updateResult(
+      id: ID!
+      patientFirstName: String!
       patientLastName: String!
-      phoneNumber: String!): Result
+      phoneNumber: String!
+    ): Admin
   }
 `;
 

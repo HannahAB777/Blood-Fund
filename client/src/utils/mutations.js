@@ -56,27 +56,36 @@ export const ADD_RESULT = gql`
 `;
 
 export const DELETE_RESULT = gql`
-mutation deleteResult($patientFirstName: String!
-  $patientLastName: String!
-  $phoneNumber: String!){
-    deleteResult(patientFirstName: $patientFirstName
-      patientLastName:  $patientLastName
-      phoneNumber: $phoneNumber){
-        _id
+  mutation deleteResult(
+    $patientFirstName: String!
+    $patientLastName: String!
+    $phoneNumber: String!
+  ) {
+    deleteResult(
+      patientFirstName: $patientFirstName
+      patientLastName: $patientLastName
+      phoneNumber: $phoneNumber
+    ) {
+      _id
       firstName
-      }
+    }
   }
 `;
 
 export const UPDATE_RESULT = gql`
-  mutation updateResult($patientFirstName: String!
-    $patientLastName: String!
-    $phoneNumber: String!){
-      updateResult(patientFirstName: $patientFirstName
-        patientLastName:  $patientLastName
-        phoneNumber: $phoneNumber){
-          _id
-        firstName
-        }
-    } 
+mutation updateResult(
+  $id: ID!
+  $patientFirstName: String!
+  $patientLastName: String!
+  $phoneNumber: String!
+) {
+  updateResult(
+    id: $id
+    patientFirstName: $patientFirstName
+    patientLastName: $patientLastName
+    phoneNumber: $phoneNumber
+  ) {
+    firstName
+    lastName
+  }}
 `;

@@ -1,5 +1,6 @@
 const { AuthenticationError } = require("apollo-server-express");
 const { GraphQLScalarType, Kind } = require("graphql");
+const { Types } = require("mongoose");
 
 const { Admin, Result } = require("../models");
 const { signToken } = require("../utils/auth");
@@ -94,39 +95,60 @@ const resolvers = {
       return { token, user };
     },
 
-    deleteResult: async (parent, { patientFirstName, patientLastName, phoneNumber}, context) =>{
+    deleteResult: async (
+      parent,
+      { patientFirstName, patientLastName, phoneNumber },
+      context
+    ) => {
       if (context.user) {
-        const deletedResult = await Result.findOneAndDelete({patientFirstName, patientLastName, phoneNumber});
+        const deletedResult = await Result.findOneAndDelete({
+          patientFirstName,
+          patientLastName,
+          phoneNumber,
+        });
         const deletedResultId = deletedResult._id;
 
         const updatedUser = await Admin.findOneAndUpdate(
           { _id: context.user._id },
-          { $pull: { results: { deletedResultId} } },
+          { $pull: { results: { deletedResultId } } },
           { new: true }
         );
         return updatedUser;
       }
-      
     },
 
-    updateResult: async (parent, {_id, patientFirstName, patientLastName, phoneNumber }, context) =>{
+    updateResult: async (
+      parent,
+      { id, patientFirstName, patientLastName, phoneNumber },
+      context
+    ) => {
       if (context.user) {
-        const updatedResult = await Result.findByIdAndUpdate({_id: _id}, {patientFirstName: patientFirstName , patientLastName: patientLastName, phoneNumber: phoneNumber});
-        const updatedResultId = await updatedResult._id;
+        console.log("ÏD", id);
+        const updatedResult = await Result.findByIdAndUpdate(id, {
+          patientFirstName: patientFirstName,
+          patientLastName: patientLastName,
+          phoneNumber: phoneNumber,
+        });
 
-        const updatedUser = await Admin.findOneAndUpdate(
-          { _id: context.user._id },
-          { $set: { results: { updatedResultId} } },
+        // console.log(updatedResult._id);
+        const updatedResultId = updatedResult._id;
+
+        const updatedUser = await Admin.findByIdAndUpdate(
+          context.user._id,
+          { $set: { results: { _id: updatedResultId } } },
           { new: true }
         );
 
-        await updatedResult.save();
-        await updatedUser.save();
+        // console.log(updatedUser);
+
+        // await updatedResult.save();
+        // await updatedUser.save();
 
         return updatedUser;
       }
-    }
 
+      throw new AuthenticationError("Login first");
+    },
   },
 };
 

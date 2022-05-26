@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import css from "./UpdateResults.css";
-import { QUERY_RESULT} from "../../utils/queries";
+import { QUERY_RESULT } from "../../utils/queries";
 
 export default function UpdateResult() {
   const location = useLocation();
@@ -19,16 +19,16 @@ export default function UpdateResult() {
     phoneNumber: "",
   });
 
-    const [UpdateResult, { data, loading, error }] = useMutation(UPDATE_RESULT, {
-      refetchQueries: [
-        QUERY_RESULT, // DocumentNode object parsed with gql
-        'result' // Query name
-      ],
-    });
+  const [UpdateResult, { data, loading, error }] = useMutation(UPDATE_RESULT, {
+    refetchQueries: [
+      QUERY_RESULT, // DocumentNode object parsed with gql
+      "result", // Query name
+    ],
+  });
 
   const navigate = useNavigate();
 
-  const handleFormSubmit = async (event, { resetform }) => {
+  const handleFormSubmit = async (event) => {
     event.preventDefault();
     const mutationResponse = await UpdateResult({
       variables: {
@@ -38,7 +38,6 @@ export default function UpdateResult() {
         phoneNumber: formState.phoneNumber,
       },
     });
-
 
     navigate("/app/enter-result");
   };

@@ -43,16 +43,14 @@ export default function EditResults() {
       <Container className="pastResults">
         <ul className="resultsList">
           {resultsList.map((result) => (
-            <div className="individualResult">
-              <li className="resultListItem" key={result[0]}>
-                {" "}
+            <div key={result._id} className="individualResult">
+              <li className="resultListItem">
                 ID: {result._id}, 
                 Patient Name: {result.patientFirstName} {result.patientLastName}
                 , Contact Number: {result.phoneNumber}, Created:
                 {result.createdAt}
               </li>
               <button
-                key={result[0]}
                 onClick={(e) => {
                   navigate("/app/update-result/:id", {
                     state: {
