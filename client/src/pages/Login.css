@@ -1,0 +1,33 @@
+.formBox{
+    margin: 10px;
+    background-color: white;
+    opacity: 0.8;
+    border-radius: 5px;
+  }
+  
+  .loginDiv{
+      background-color: #fc4503;
+      width: 400px;
+      height: 270px;
+      margin-top: 100px;
+      border-radius: 15px;
+      text-align: center;
+      color:  white;
+  }
+  
+  .loginBtn {
+    background-color: #850503;
+    width: 50%;
+    margin-top: 20px;
+    padding-right: 0px;
+    margin-right: 0px;
+    border-radius: 5px;
+  }
+
+  .loginLink{
+      color: #850503;
+  }
+
+  .loginLink:hover{
+      color: black;
+  }

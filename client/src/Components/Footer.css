@@ -1,0 +1,32 @@
+
+  .navbar-footer{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #fc4503;
+    justify-content: space-evenly;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+   }
+   
+   .navList{
+       list-style: none;
+   }
+   
+   .link{
+       text-decoration: none;
+       list-style: none;
+       font-size: larger;
+       background-color: #fc4503;
+       color: white;
+   }
+   
+   .link:hover{
+       color: #850503;
+   }

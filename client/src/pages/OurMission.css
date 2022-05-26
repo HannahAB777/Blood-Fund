@@ -1,0 +1,14 @@
+.missionText{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #f2f7f7;
+
+}
+
+.mission-div{
+    margin-top: 100px;
+}
+
+.mission-p{
+    margin-top: 15px;
+    font-size:large;
+}

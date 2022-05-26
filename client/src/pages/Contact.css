@@ -1,0 +1,36 @@
+.formBoxContact{
+  margin: 10px;
+  background-color: #850503;
+  opacity: 0.5;
+}
+
+.contactMe{
+  justify-content: center;
+  
+}
+
+.contactContainer{
+  align-items: center;
+}
+
+.contactDiv{
+margin-top: 120px;
+}
+
+.btn {
+  background-color: #850503;
+  width: 100%;
+  padding-right: 0px;
+  margin-right: 0px;
+}
+
+.btn-col{
+  justify-content: center;
+  padding-right: 0px;
+  margin-right: 0px;
+}
+
+.btnRow{
+  justify-content: center;
+  margin-left: 0px;
+}
