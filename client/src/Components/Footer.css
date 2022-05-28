@@ -1,9 +1,9 @@
 
   .navbar-footer{
-    height: 60px;
+    height: 50px;
     display: flex;
     align-items: center;
-    background-color: #fc4503;
+    background-color:#870d04;
     justify-content: space-evenly;
     padding-left: 0px;
     padding-right: 0px;
@@ -22,11 +22,12 @@
    .link{
        text-decoration: none;
        list-style: none;
-       font-size: larger;
-       background-color: #fc4503;
+       font-family: Roboto;
+       font-size:x-large;
+       background-color:#870d04;
        color: white;
    }
    
    .link:hover{
-       color: #850503;
+       color: #f51707;
    }
