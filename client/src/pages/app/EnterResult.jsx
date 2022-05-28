@@ -60,7 +60,7 @@ export default function EnterResult() {
               <label htmlFor="patientFirstName">First Name:</label>
               <input
                 className="formBox"
-                placeholder="First"
+                placeholder="first name"
                 name="patientFirstName"
                 type="patientFirstName"
                 id="patientFirstName"
@@ -71,7 +71,7 @@ export default function EnterResult() {
               <label htmlFor="patientLastName">Last Name:</label>
               <input
                 className="formBox"
-                placeholder="Last"
+                placeholder="last name"
                 name="patientLastName"
                 type="patientLastName"
                 id="patientLastName"
@@ -82,7 +82,7 @@ export default function EnterResult() {
               <label htmlFor="phoneNumber">Phone Number:</label>
               <input
                 className="formBox"
-                placeholder="Phone Number"
+                placeholder="phone number"
                 name="phoneNumber"
                 type="phoneNumber"
                 id="phoneNumber"
@@ -90,7 +90,7 @@ export default function EnterResult() {
               />
             </div>
             <div className="flex-row space-between my-2">
-              <label htmlFor="createdAt">select date :</label>
+              <label htmlFor="createdAt">Date Created :</label>
               <input
                 className="formBox"
                 type="date"
