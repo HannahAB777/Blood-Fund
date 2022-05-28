@@ -53,7 +53,7 @@ export default function UpdateResult() {
   return (
     <Row>
       <Col>
-        <div className="container enterResultsDiv">
+        <div className="container updateDiv enterResultsDiv">
           <h2>Enter Updated Results</h2>
           <form onSubmit={handleFormSubmit}>
             <div className="flex-row space-between my-2">
