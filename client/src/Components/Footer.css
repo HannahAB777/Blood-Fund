@@ -17,7 +17,18 @@
    
    .navList{
        list-style: none;
+       text-decoration: none;
+       list-style: none;
+       font-family: Roboto;
+       font-size:x-large;
+       background-color:#870d04;
+       color: white;
+       border: #870d04;;
    }
+
+   .navList:hover{
+    color: #f51707;
+}
    
    .link{
        text-decoration: none;
