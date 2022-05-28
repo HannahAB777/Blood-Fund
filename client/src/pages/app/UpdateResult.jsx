@@ -97,7 +97,6 @@ export default function UpdateResult() {
           </form>
         </div>
       </Col>
-      <Col></Col>
     </Row>
   );
 }

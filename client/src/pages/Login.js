@@ -40,7 +40,7 @@ function Login(props) {
           <label htmlFor="email">Email Address:</label>
           <input
           className='formBox'
-            placeholder="youremail@test.com"
+            placeholder="Email@test.com"
             name="email"
             type="email"
             id="email"

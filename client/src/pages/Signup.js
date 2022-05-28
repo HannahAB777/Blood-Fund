@@ -45,7 +45,7 @@ function Signup(props) {
           <label htmlFor="firstName">First Name:</label>
           <input
           className='formBox'
-            placeholder="first name"
+            placeholder="First Name"
             name="firstName"
             type="firstName"
             id="firstName"
@@ -56,7 +56,7 @@ function Signup(props) {
           <label htmlFor="lastName">Last Name:</label>
           <input
           className='formBox'
-            placeholder="last name"
+            placeholder="Last Name"
             name="lastName"
             type="lastName"
             id="lastName"
@@ -67,7 +67,7 @@ function Signup(props) {
           <label htmlFor="email">Email:</label>
           <input
           className='formBox'
-            placeholder="youremail@test.com"
+            placeholder="Email@test.com"
             name="email"
             type="email"
             id="email"
@@ -78,7 +78,7 @@ function Signup(props) {
           <label htmlFor="email">License Number:</label>
           <input
           className='formBox'
-            placeholder="license number"
+            placeholder="License Number"
             name="medicalLicenseNumber"
             type="medicalLicenseNumber"
             id="medicalLicenseNumber"
