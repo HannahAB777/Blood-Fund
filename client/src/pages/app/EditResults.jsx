@@ -45,12 +45,11 @@ export default function EditResults() {
           {resultsList.map((result) => (
             <div key={result._id} className="individualResult">
               <li className="resultListItem">
-                ID: {result._id}, 
-                Patient Name: {result.patientFirstName} {result.patientLastName}
-                , Contact Number: {result.phoneNumber}, Created:
-                {result.createdAt}
+                ID: {result._id}.    Patient Name:   {result.patientFirstName} {result.patientLastName}.    Contact Number: {result.phoneNumber}.    Date Created:
+                {result.createdAt}.
               </li>
               <button
+              className="resultsBtn" 
                 onClick={(e) => {
                   navigate("/app/update-result/:id", {
                     state: {
@@ -65,6 +64,7 @@ export default function EditResults() {
                 Update
               </button>
               <button
+              className="resultsBtn" 
                 onClick={(e) => {
                   handleDeleteResult(
                     result.patientFirstName,
