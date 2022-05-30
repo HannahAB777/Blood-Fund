@@ -7,6 +7,7 @@ import { useQuery, useMutation } from "@apollo/client";
 import css from "./EditResults.css";
 import { DELETE_RESULT } from "../../utils/mutations";
 import Auth from "../../utils/Auth";
+import moment from 'moment';
 
 export default function EditResults() {
   const { loading, data } = useQuery(QUERY_RESULT);
@@ -45,8 +46,7 @@ export default function EditResults() {
           {resultsList.map((result) => (
             <div key={result._id} className="individualResult">
               <li className="resultListItem">
-                ID: {result._id}.    Patient Name:   {result.patientFirstName} {result.patientLastName}.    Contact Number: {result.phoneNumber}.    Date Created:
-                {result.createdAt}.
+                ID: {result._id}.    Patient Name:   {result.patientFirstName} {result.patientLastName}.    Contact Number: {result.phoneNumber}.    Date Created:    {moment(result.createdAt).format("MMM Do YYYY")}.
               </li>
               <button
               className="resultsBtn" 
